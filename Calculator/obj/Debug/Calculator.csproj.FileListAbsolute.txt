@@ -1,0 +1,29 @@
+C:\Users\Rasmus\source\repos\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\Rasmus\source\repos\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\Rasmus\source\repos\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Rasmus\source\repos\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+C:\Users\Rasmus\source\repos\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
+C:\Users\Rasmus\source\repos\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\Rasmus\source\repos\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\Rasmus\source\repos\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Rasmus\source\repos\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\Rasmus\source\repos\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Google drev\Main drive\Programming\BeginToCodeWithCSharp\Projects\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Google drev\Main drive\Programming\Projects\Calculator\Calculator\obj\Debug\Calculator.pdb
