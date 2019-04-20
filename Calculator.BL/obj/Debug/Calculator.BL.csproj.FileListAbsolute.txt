@@ -1,0 +1,6 @@
+C:\Users\rasmu\Desktop\Main drive\Programming\SWS-Calculator\Calculator.BL\bin\Debug\Calculator.BL.dll
+C:\Users\rasmu\Desktop\Main drive\Programming\SWS-Calculator\Calculator.BL\bin\Debug\Calculator.BL.pdb
+C:\Users\rasmu\Desktop\Main drive\Programming\SWS-Calculator\Calculator.BL\obj\Debug\Calculator.BL.csprojAssemblyReference.cache
+C:\Users\rasmu\Desktop\Main drive\Programming\SWS-Calculator\Calculator.BL\obj\Debug\Calculator.BL.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\Desktop\Main drive\Programming\SWS-Calculator\Calculator.BL\obj\Debug\Calculator.BL.dll
+C:\Users\rasmu\Desktop\Main drive\Programming\SWS-Calculator\Calculator.BL\obj\Debug\Calculator.BL.pdb

@@ -67,7 +67,6 @@ namespace Calculator
             this.labelDisplay.TabIndex = 0;
             this.labelDisplay.Text = "0";
             this.labelDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelDisplay.Click += new System.EventHandler(this.labelDisplay_Click);
             // 
             // button1
             // 
@@ -361,11 +360,6 @@ namespace Calculator
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void labelDisplay_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion

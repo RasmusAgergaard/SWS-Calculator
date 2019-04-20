@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Calculator.BL;
+using System;
 using System.Windows.Forms;
 
 namespace Calculator
 {
     public partial class Form1 : Form
     {
+        MainLogic mainLogic = new MainLogic();
+
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +17,8 @@ namespace Calculator
         // 1
         private void ButtonClick1(object sender, EventArgs e)
         {
-            labelDisplay.Text = labelDisplay.Text + button1.Text;
+            mainLogic.NumberPress(1);
+            SetDisplay();
         }
 
         // Add
@@ -35,16 +32,9 @@ namespace Calculator
 
         }
 
-        public void RemoveZero()
+        public void SetDisplay()
         {
-            int tempInt = Int32.Parse(labelDisplay.Text);
-
-            if (tempInt == 0)
-            {
-                labelDisplay.Text = "";
-            }
+            labelDisplay.Text = mainLogic.NewValue.ToString();
         }
-
-
     }
 }
