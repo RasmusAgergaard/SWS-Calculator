@@ -22,15 +22,25 @@ namespace Calculator.BL
 
         public void Reset()
         {
-            NewValue = 0;
-            OldValue = 0;
-            ResultValue = 0;
+            NewValue = -1;
+            OldValue = -1;
+            ResultValue = -1;
             Operator = operators.deafult;
         }
 
         public void NumberPress(float number)
         {
             NewValue = number;
+        }
+
+        public void OperatorPress(operators inputOperator)
+        {
+            OldValue = NewValue;
+        }
+
+        public void ResultPress()
+        {
+            ResultValue = NewValue + OldValue;
         }
     }
 }
