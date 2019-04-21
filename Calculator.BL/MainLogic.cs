@@ -6,41 +6,93 @@ using System.Threading.Tasks;
 
 namespace Calculator.BL
 {
-    public enum operators {deafult, add }
+    public enum operators {deafult, addition, subtraction, multiplication, division}
 
     public class MainLogic
     {
         public MainLogic()
         {
             Reset();
+            StoredValue = "";
         }
 
-        public float NewValue { get; set; }
-        public float OldValue { get; set; }
-        public float ResultValue { get; set; }
+        public string NewValue { get; set; }
+        public string OldValue { get; set; }
+        public string ResultValue { get; set; }
         public operators Operator { get; set; }
+        public bool DecimalClicked { get; set; }
+        public string StoredValue { get; set; }
 
         public void Reset()
         {
-            NewValue = -1;
-            OldValue = -1;
-            ResultValue = -1;
+            NewValue = "";
+            OldValue = "";
+            ResultValue = "";
             Operator = operators.deafult;
+            DecimalClicked = false;
         }
 
-        public void NumberPress(float number)
+        public void NumberPress(string number)
         {
-            NewValue = number;
+            if (ResultValue != "")
+            {
+                NewValue = number;
+                ResultValue = "";
+            }
+            else
+            {
+                if (number == ",")
+                {
+                    if (DecimalClicked == false)
+                    {
+                        NewValue += number;
+                        DecimalClicked = true;
+                    }
+                }
+                else
+                {
+                    NewValue += number;
+                }
+            }
         }
 
         public void OperatorPress(operators inputOperator)
         {
-            OldValue = NewValue;
+            if (ResultValue == "")
+            {
+                OldValue = NewValue;
+            }
+            else
+            {
+                OldValue = ResultValue;
+            }
+
+            NewValue = "";
+            DecimalClicked = false;
+            Operator = inputOperator;
+            ResultValue = "";
         }
 
         public void ResultPress()
         {
-            ResultValue = NewValue + OldValue;
+            
         }
+
+        public void Clear()
+        {
+            Reset();
+        }
+
+        public void Copy()
+        {
+
+        }
+
+        public void Paste()
+        {
+
+        }
+
+
     }
 }

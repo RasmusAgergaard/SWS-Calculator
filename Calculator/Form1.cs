@@ -14,48 +14,66 @@ namespace Calculator
         }
 
         //Numbers
-        private void ButtonClick1(object sender, EventArgs e) { UpdateDisplayNewValue(1); }
-        private void ButtonClick2(object sender, EventArgs e) { UpdateDisplayNewValue(2); }
-        private void ButtonClick3(object sender, EventArgs e) { UpdateDisplayNewValue(3); }
-        private void ButtonClick4(object sender, EventArgs e) { UpdateDisplayNewValue(4); }
-        private void ButtonClick5(object sender, EventArgs e) { UpdateDisplayNewValue(5); }
-        private void ButtonClick6(object sender, EventArgs e) { UpdateDisplayNewValue(6); }
-        private void ButtonClick7(object sender, EventArgs e) { UpdateDisplayNewValue(7); }
-        private void ButtonClick8(object sender, EventArgs e) { UpdateDisplayNewValue(8); }
-        private void ButtonClick9(object sender, EventArgs e) { UpdateDisplayNewValue(9); }
-        private void ButtonClick0(object sender, EventArgs e) { UpdateDisplayNewValue(0); }
+        private void ButtonClick1(object sender, EventArgs e) { NumberPress("1"); }
+        private void ButtonClick2(object sender, EventArgs e) { NumberPress("2"); }
+        private void ButtonClick3(object sender, EventArgs e) { NumberPress("3"); }
+        private void ButtonClick4(object sender, EventArgs e) { NumberPress("4"); }
+        private void ButtonClick5(object sender, EventArgs e) { NumberPress("5"); }
+        private void ButtonClick6(object sender, EventArgs e) { NumberPress("6"); }
+        private void ButtonClick7(object sender, EventArgs e) { NumberPress("7"); }
+        private void ButtonClick8(object sender, EventArgs e) { NumberPress("8"); }
+        private void ButtonClick9(object sender, EventArgs e) { NumberPress("9"); }
+        private void ButtonClick0(object sender, EventArgs e) { NumberPress("0"); }
+        private void ButtonComma_Click(object sender, EventArgs e) { NumberPress(","); }
 
-        // Add
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            var numberInFloat = 0f;
-            float.TryParse(labelDisplay.Text, out numberInFloat);
+        //Operators
+        private void buttonAdd_Click(object sender, EventArgs e) { OperatorPress(operators.addition); }
+        private void ButtonMinus_Click(object sender, EventArgs e) { OperatorPress(operators.subtraction); }
+        private void ButtonMultiply_Click(object sender, EventArgs e) { OperatorPress(operators.multiplication); }
+        private void ButtonDivide_Click(object sender, EventArgs e) { OperatorPress(operators.division); }
 
-            mainLogic.NewValue = numberInFloat;
-            mainLogic.OperatorPress(operators.add);
-            labelDisplay.Text = mainLogic.NewValue.ToString() + " + ";
-        }
 
+        //Sum
         private void buttonSum_Click(object sender, EventArgs e)
         {
-            mainLogic.ResultPress();
-            UpdateDisplayResultValue();
+
         }
 
-        public void UpdateDisplayNewValue(float number)
+        //Clear
+        private void ButtonClear_Click(object sender, EventArgs e)
         {
-            //Remove zero
-            if (labelDisplay.Text == "0")
+            mainLogic.Clear();
+            labelDisplay.Text = "0";
+        }
+
+        //Copy
+        private void ButtonCopy_Click(object sender, EventArgs e)
+        {
+            mainLogic.StoredValue = labelDisplay.Text.ToString();
+        }
+
+        //Paste
+        private void ButtonPaste_Click(object sender, EventArgs e)
+        {
+            if (mainLogic.StoredValue != "")
             {
-                labelDisplay.Text = "";
+                labelDisplay.Text = mainLogic.StoredValue;
+                mainLogic.NewValue = mainLogic.StoredValue;
             }
-
-            labelDisplay.Text += number.ToString();
         }
 
-        public void UpdateDisplayResultValue()
+        public void NumberPress(string number)
         {
-            labelDisplay.Text = mainLogic.ResultValue.ToString();
+            mainLogic.NumberPress(number);
+            labelDisplay.Text = mainLogic.NewValue;
         }
+
+        private void OperatorPress(operators inputOperator)
+        {
+            mainLogic.OperatorPress(inputOperator);
+            labelDisplay.Text = "";
+        }
+
+
     }
 }

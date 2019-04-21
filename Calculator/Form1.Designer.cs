@@ -48,9 +48,9 @@ namespace Calculator
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonMultiply = new System.Windows.Forms.Button();
             this.buttonDivide = new System.Windows.Forms.Button();
-            this.buttonNull3 = new System.Windows.Forms.Button();
-            this.buttonNull2 = new System.Windows.Forms.Button();
-            this.buttonNull1 = new System.Windows.Forms.Button();
+            this.buttonPaste = new System.Windows.Forms.Button();
+            this.buttonCopy = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelDisplay
@@ -76,7 +76,7 @@ namespace Calculator
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(16, 391);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 62);
             this.button1.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace Calculator
             this.buttonNull4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNull4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNull4.Location = new System.Drawing.Point(16, 460);
-            this.buttonNull4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonNull4.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNull4.Name = "buttonNull4";
             this.buttonNull4.Size = new System.Drawing.Size(93, 62);
             this.buttonNull4.TabIndex = 2;
@@ -104,7 +104,7 @@ namespace Calculator
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button0.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button0.Location = new System.Drawing.Point(117, 460);
-            this.button0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button0.Margin = new System.Windows.Forms.Padding(4);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(93, 62);
             this.button0.TabIndex = 3;
@@ -119,12 +119,13 @@ namespace Calculator
             this.buttonComma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonComma.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonComma.Location = new System.Drawing.Point(219, 460);
-            this.buttonComma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonComma.Margin = new System.Windows.Forms.Padding(4);
             this.buttonComma.Name = "buttonComma";
             this.buttonComma.Size = new System.Drawing.Size(93, 62);
             this.buttonComma.TabIndex = 4;
             this.buttonComma.Text = ",";
             this.buttonComma.UseVisualStyleBackColor = false;
+            this.buttonComma.Click += new System.EventHandler(this.ButtonComma_Click);
             // 
             // buttonSum
             // 
@@ -133,7 +134,7 @@ namespace Calculator
             this.buttonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSum.Location = new System.Drawing.Point(320, 460);
-            this.buttonSum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSum.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSum.Name = "buttonSum";
             this.buttonSum.Size = new System.Drawing.Size(120, 62);
             this.buttonSum.TabIndex = 5;
@@ -148,7 +149,7 @@ namespace Calculator
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(117, 391);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 62);
             this.button2.TabIndex = 6;
@@ -163,7 +164,7 @@ namespace Calculator
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(219, 391);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 62);
             this.button3.TabIndex = 7;
@@ -178,7 +179,7 @@ namespace Calculator
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.Location = new System.Drawing.Point(320, 391);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(120, 62);
             this.buttonAdd.TabIndex = 8;
@@ -193,7 +194,7 @@ namespace Calculator
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(219, 322);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 62);
             this.button6.TabIndex = 11;
@@ -208,7 +209,7 @@ namespace Calculator
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(117, 322);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 62);
             this.button5.TabIndex = 10;
@@ -223,7 +224,7 @@ namespace Calculator
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(16, 322);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 62);
             this.button4.TabIndex = 9;
@@ -238,7 +239,7 @@ namespace Calculator
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(219, 254);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(93, 62);
             this.button9.TabIndex = 14;
@@ -253,7 +254,7 @@ namespace Calculator
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(117, 254);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(93, 62);
             this.button8.TabIndex = 13;
@@ -268,7 +269,7 @@ namespace Calculator
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(16, 254);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(93, 62);
             this.button7.TabIndex = 12;
@@ -283,12 +284,13 @@ namespace Calculator
             this.buttonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMinus.Location = new System.Drawing.Point(320, 322);
-            this.buttonMinus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonMinus.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMinus.Name = "buttonMinus";
             this.buttonMinus.Size = new System.Drawing.Size(120, 62);
             this.buttonMinus.TabIndex = 15;
             this.buttonMinus.Text = "-";
             this.buttonMinus.UseVisualStyleBackColor = false;
+            this.buttonMinus.Click += new System.EventHandler(this.ButtonMinus_Click);
             // 
             // buttonMultiply
             // 
@@ -297,12 +299,13 @@ namespace Calculator
             this.buttonMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMultiply.Location = new System.Drawing.Point(320, 254);
-            this.buttonMultiply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonMultiply.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMultiply.Name = "buttonMultiply";
             this.buttonMultiply.Size = new System.Drawing.Size(120, 62);
             this.buttonMultiply.TabIndex = 16;
             this.buttonMultiply.Text = "×";
             this.buttonMultiply.UseVisualStyleBackColor = false;
+            this.buttonMultiply.Click += new System.EventHandler(this.ButtonMultiply_Click);
             // 
             // buttonDivide
             // 
@@ -311,51 +314,58 @@ namespace Calculator
             this.buttonDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDivide.Location = new System.Drawing.Point(320, 185);
-            this.buttonDivide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDivide.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDivide.Name = "buttonDivide";
             this.buttonDivide.Size = new System.Drawing.Size(120, 62);
             this.buttonDivide.TabIndex = 17;
             this.buttonDivide.Text = "÷";
             this.buttonDivide.UseVisualStyleBackColor = false;
+            this.buttonDivide.Click += new System.EventHandler(this.ButtonDivide_Click);
             // 
-            // buttonNull3
+            // buttonPaste
             // 
-            this.buttonNull3.BackColor = System.Drawing.Color.White;
-            this.buttonNull3.FlatAppearance.BorderSize = 0;
-            this.buttonNull3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNull3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNull3.Location = new System.Drawing.Point(219, 185);
-            this.buttonNull3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonNull3.Name = "buttonNull3";
-            this.buttonNull3.Size = new System.Drawing.Size(93, 62);
-            this.buttonNull3.TabIndex = 20;
-            this.buttonNull3.UseVisualStyleBackColor = false;
+            this.buttonPaste.BackColor = System.Drawing.Color.White;
+            this.buttonPaste.FlatAppearance.BorderSize = 0;
+            this.buttonPaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPaste.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPaste.Location = new System.Drawing.Point(219, 185);
+            this.buttonPaste.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPaste.Name = "buttonPaste";
+            this.buttonPaste.Size = new System.Drawing.Size(93, 62);
+            this.buttonPaste.TabIndex = 20;
+            this.buttonPaste.Text = "MP";
+            this.buttonPaste.UseVisualStyleBackColor = false;
+            this.buttonPaste.Click += new System.EventHandler(this.ButtonPaste_Click);
             // 
-            // buttonNull2
+            // buttonCopy
             // 
-            this.buttonNull2.BackColor = System.Drawing.Color.White;
-            this.buttonNull2.FlatAppearance.BorderSize = 0;
-            this.buttonNull2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNull2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNull2.Location = new System.Drawing.Point(117, 185);
-            this.buttonNull2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonNull2.Name = "buttonNull2";
-            this.buttonNull2.Size = new System.Drawing.Size(93, 62);
-            this.buttonNull2.TabIndex = 19;
-            this.buttonNull2.UseVisualStyleBackColor = false;
+            this.buttonCopy.BackColor = System.Drawing.Color.White;
+            this.buttonCopy.FlatAppearance.BorderSize = 0;
+            this.buttonCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCopy.Location = new System.Drawing.Point(117, 185);
+            this.buttonCopy.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCopy.Name = "buttonCopy";
+            this.buttonCopy.Size = new System.Drawing.Size(93, 62);
+            this.buttonCopy.TabIndex = 19;
+            this.buttonCopy.Text = "MC";
+            this.buttonCopy.UseVisualStyleBackColor = false;
+            this.buttonCopy.Click += new System.EventHandler(this.ButtonCopy_Click);
             // 
-            // buttonNull1
+            // buttonClear
             // 
-            this.buttonNull1.BackColor = System.Drawing.Color.White;
-            this.buttonNull1.FlatAppearance.BorderSize = 0;
-            this.buttonNull1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNull1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNull1.Location = new System.Drawing.Point(16, 185);
-            this.buttonNull1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonNull1.Name = "buttonNull1";
-            this.buttonNull1.Size = new System.Drawing.Size(93, 62);
-            this.buttonNull1.TabIndex = 18;
-            this.buttonNull1.UseVisualStyleBackColor = false;
+            this.buttonClear.BackColor = System.Drawing.Color.White;
+            this.buttonClear.FlatAppearance.BorderSize = 0;
+            this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.Location = new System.Drawing.Point(16, 185);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(93, 62);
+            this.buttonClear.TabIndex = 18;
+            this.buttonClear.Text = "AC";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // Form1
             // 
@@ -363,9 +373,9 @@ namespace Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(456, 537);
-            this.Controls.Add(this.buttonNull3);
-            this.Controls.Add(this.buttonNull2);
-            this.Controls.Add(this.buttonNull1);
+            this.Controls.Add(this.buttonPaste);
+            this.Controls.Add(this.buttonCopy);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonDivide);
             this.Controls.Add(this.buttonMultiply);
             this.Controls.Add(this.buttonMinus);
@@ -385,7 +395,7 @@ namespace Calculator
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelDisplay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Calculator";
             this.ResumeLayout(false);
@@ -413,9 +423,9 @@ namespace Calculator
         private System.Windows.Forms.Button buttonMinus;
         private System.Windows.Forms.Button buttonMultiply;
         private System.Windows.Forms.Button buttonDivide;
-        private System.Windows.Forms.Button buttonNull3;
-        private System.Windows.Forms.Button buttonNull2;
-        private System.Windows.Forms.Button buttonNull1;
+        private System.Windows.Forms.Button buttonPaste;
+        private System.Windows.Forms.Button buttonCopy;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 
